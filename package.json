@@ -6,8 +6,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/*.test.js",
-    "test:report": "mocha test/*.test.js --reporter mochawesome --reporter-options reportDir=./mochawesome-report,reportFilename=mochawesome.json,quiet=true"
+    "test": "mocha --reporter mochawesome \"test/**/*.test.js\""
   },
   "keywords": [],
   "author": "",
