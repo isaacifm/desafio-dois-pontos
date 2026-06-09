@@ -2,11 +2,8 @@
   "name": "desafio-dois-pontos",
   "version": "1.0.0",
   "main": "index.js",
-  "directories": {
-    "test": "mocha --reporter mochawesome \"test/**/*.test.js\""
-  },
   "scripts": {
-    "test": "mocha --reporter mochawesome \"test/**/*.test.js\""
+    "test": "npx mocha test/*.test.js --reporter mochawesome --reporter-options reportDir=./mochawesome-report,reportFilename=mochawesome.json,quiet=true"
   },
   "keywords": [],
   "author": "",
