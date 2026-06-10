@@ -1,4 +1,4 @@
-name: Execução post deploy de Testes
+name: Execução Pós-Deploy de Testes
 
 on:
   workflow_run:
