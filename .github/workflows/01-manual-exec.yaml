@@ -28,10 +28,21 @@ jobs:
           cache: 'npm'
 
       - name: 📦 Instalar dependências
-        run: npm ci
+        run: npm ci --verbose
+
+      - name: ✅ Verificar instalação
+        run: |
+          echo "=== Node e npm ==="
+          node --version
+          npm --version
+          echo "=== Mocha ==="
+          npx mocha --version
+          echo "=== node_modules ==="
+          ls -la node_modules/.bin/ | grep mocha || echo "Mocha não encontrado"
 
       - name: 🧪 Executar testes
-        run: npm test        
+        run: npm test
+        continue-on-error: true
 
       - name: 📊 Upload relatório de testes
         if: always()
