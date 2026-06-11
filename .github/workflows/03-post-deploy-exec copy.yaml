@@ -4,17 +4,7 @@ on:
   workflow_run:
     workflows: ["Execução Manual de Testes"]
     types: [completed]
-
-  workflow_dispatch:
-    inputs:
-      test_reporter:
-        description: 'Formato do relatório'
-        required: false
-        default: 'mochawesome'
-        type: choice
-        options:
-          - mochawesome
-          - standard
+  
 
 jobs:
   test:
