@@ -327,36 +327,36 @@ Preservam resultados de testes para análise posterior:
 ├─────────────────────────────────────────────────────┤
 │                                                     │
 │  1. Checkout                                        │
-│     └─ git clone do repositório                    │
+│     └─ git clone do repositório                     │
 │                                                     │
-│  2. Setup Node.js                                  │
-│     ├─ Instalar Node.js 24                        │
-│     ├─ Validar instalação                          │
-│     └─ Preparar cache npm                          │
+│  2. Setup Node.js                                   │ 
+│     ├─ Instalar Node.js 24                          │
+│     ├─ Validar instalação                           │
+│     └─ Preparar cache npm                           │
 │                                                     │
 │  3. Install Dependencies                            │
-│     ├─ npm ci --verbose                            │
-│     └─ Carregar cache (se disponível)              │
+│     ├─ npm ci --verbose                             │
+│     └─ Carregar cache (se disponível)               │
 │                                                     │
 │  4. Verify Installation                             │
-│     ├─ node --version                              │
-│     ├─ npm --version                               │
-│     └─ mocha --version                             │
+│     ├─ node --version                               │
+│     ├─ npm --version                                │
+│     └─ mocha --version                              │
 │                                                     │
 │  5. Run Tests                                       │
-│     ├─ npm test                                    │
-│     ├─ Mocha executa test/*.test.js                │
-│     ├─ Gera mochawesome.json                       │
-│     └─ continue-on-error: true                     │
+│     ├─ npm test                                     │
+│     ├─ Mocha executa test/*.test.js                 │
+│     ├─ Gera mochawesome.json                        │
+│     └─ continue-on-error: true                      │ 
 │                                                     │
-│  6. Upload Artifacts (if: always())                │
-│     ├─ Upload mochawesome-report/                  │
-│     └─ Retenção de 30 dias                         │
+│  6. Upload Artifacts (if: always())                 │
+│     ├─ Upload mochawesome-report/                   │
+│     └─ Retenção de 30 dias                          │
 │                                                     │
-│  7. Generate Comment (if: always())                │
-│     ├─ Ler mochawesome.json                        │
-│     ├─ Extrair stats (passes, failures)            │
-│     └─ Comentar no run com resumo                  │
+│  7. Generate Comment (if: always())                 │
+│     ├─ Ler mochawesome.json                         │
+│     ├─ Extrair stats (passes, failures)             │
+│     └─ Comentar no run com resumo                   │
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
